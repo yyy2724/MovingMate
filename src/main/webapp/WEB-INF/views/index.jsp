@@ -18,19 +18,19 @@
 
                         <div class="mySlides fade">
                             <div class="numbertext">1 / 3</div>
-                            <img src="${pageContext.request.contextPath}/images/index/index1.png" style="width:100%"
+                            <img src="${pageContext.request.contextPath}/images/index/index1.png" style="width:100%; height: 300px"
                                  alt="대체이미지1">
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numbertext">2 / 3</div>
-                            <img src="${pageContext.request.contextPath}/images/index/index2.png" style="width:100%"
+                            <img src="${pageContext.request.contextPath}/images/index/index2.png" style="width:100%; height: 300px"
                                  alt="대체이미지2">
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numbertext">3 / 3</div>
-                            <img src="${pageContext.request.contextPath}/images/index/index3.png" style="width:100%"
+                            <img src="${pageContext.request.contextPath}/images/index/index3.png" style="width:100%; height: 300px"
                                  alt="대체이미지3">
                         </div>
 

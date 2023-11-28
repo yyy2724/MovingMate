@@ -1,12 +1,47 @@
 @import "/css/common/reset.css";
 
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sections-con {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.section1-con {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.section1 {
+    width: 100%;
+}
+
 .slideshow-container {
     position: relative;
     max-width: 100%;
     margin: auto;
+    width: 100%;
+    text-align: center;
 }
 .mySlides {
     display: none;
+    width: 100%;
+    height: auto;
 }
 /* ... 다른 스타일들 ... */
 .prev, .next {

@@ -4,7 +4,10 @@
 }
 html,body{
     width:100%;
-    height:auto;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 수평 스크롤 막기 */
 }
 a{
     text-decoration:none;
@@ -20,6 +23,5 @@ img{
 body{
     background-color: #eaeaf0;
     padding-top: 90px;
-    padding-left: 200px;
 }
 
