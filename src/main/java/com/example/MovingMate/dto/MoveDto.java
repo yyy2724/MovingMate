@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -23,5 +25,9 @@ public class MoveDto {
     private String firstAddress;
 
     private String endAddress;
+
+    private LocalDateTime createTime;
+
+    private LocalDateTime updateTime;
 
 }

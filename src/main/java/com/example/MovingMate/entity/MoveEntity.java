@@ -1,6 +1,7 @@
-package com.example.MovingMate.Entity;
+package com.example.MovingMate.entity;
 
 
+import com.example.MovingMate.entity.base.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class MoveEntity {
+public class MoveEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

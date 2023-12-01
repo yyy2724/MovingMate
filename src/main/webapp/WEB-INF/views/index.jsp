@@ -20,6 +20,6 @@ pageEncoding="UTF-8" %>
     도착지 : <input type="text" name="endAddress" id="endAddress"  onclick="endAddressList()">
     <input type="submit" value="이사상담받기">
 </form>
-
+<a href="/admin/login">관리자 로그인</a>
 </body>
 </html>

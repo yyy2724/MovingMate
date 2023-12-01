@@ -1,13 +1,11 @@
 package com.example.MovingMate.service;
 
-import com.example.MovingMate.Entity.MoveEntity;
+import com.example.MovingMate.entity.MoveEntity;
 import com.example.MovingMate.dto.MoveDto;
 import com.example.MovingMate.repository.MoveRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Optional;
 
 @Service
