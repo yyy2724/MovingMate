@@ -1,9 +1,11 @@
 package com.example.MovingMate.dto.calender;
 
+import com.example.MovingMate.entity.MoveEntity.MoveEntity;
 import lombok.*;
 
 import javax.persistence.Column;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Builder
 @Getter
@@ -20,4 +22,6 @@ public class EventDto {
     private LocalDateTime end;
 
     private boolean allDay;
+
+    private List<MoveEntity> moveEntities;
 }

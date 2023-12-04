@@ -1,9 +1,11 @@
 package com.example.MovingMate.entity.calender;
 
+import com.example.MovingMate.entity.MoveEntity.MoveEntity;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Builder
 @Getter
@@ -15,7 +17,7 @@ import java.time.LocalDateTime;
 public class EventEntity {
 
     @Id
-    @Column(nullable = false)
+    @Column(nullable = false, name = "event_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -31,4 +33,6 @@ public class EventEntity {
     @Column(nullable = false)
     private boolean allDay;
 
+//    @OneToMany(mappedBy = "eventEntity", cascade = CascadeType.REMOVE)
+//    private List<MoveEntity> moveEntities;
 }

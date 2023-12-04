@@ -1,6 +1,7 @@
-package com.example.MovingMate.Entity;
+package com.example.MovingMate.entity.MoveEntity;
 
 
+import com.example.MovingMate.entity.calender.EventEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -32,5 +33,12 @@ public class MoveEntity {
 
     @Column(nullable = false)
     private String moveType;
+
+    @Column(name = "start")
+    private String start;   // 캘린더에서 선택한 날짜
+
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "event_id")
+//    private EventEntity eventEntity;
 
 }
