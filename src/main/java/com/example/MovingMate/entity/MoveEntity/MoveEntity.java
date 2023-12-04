@@ -1,7 +1,7 @@
 package com.example.MovingMate.entity.MoveEntity;
 
 
-import com.example.MovingMate.entity.calender.EventEntity;
+import com.example.MovingMate.entity.base.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class MoveEntity {
+public class MoveEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,8 +37,5 @@ public class MoveEntity {
     @Column(name = "start")
     private String start;   // 캘린더에서 선택한 날짜
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "event_id")
-//    private EventEntity eventEntity;
 
 }

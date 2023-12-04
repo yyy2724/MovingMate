@@ -41,17 +41,6 @@ public class EventController {
         return ResponseEntity.ok("일정 추가 완료");
     }
 
-    @GetMapping("/calendar/list")
-    public ResponseEntity<List<MoveDto>> listCalendar(@ModelAttribute MoveDto moveDto){
-
-        List<MoveDto> calendarDto = moveService.calendarListAll();
-        return ResponseEntity.ok(calendarDto);
-    }
-
-    @GetMapping("/addEvent")
-    public List<MoveDto> setCalendar(){
-        return moveService.calendarListAll();
-    }
 
 
 

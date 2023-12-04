@@ -18,28 +18,6 @@ public class MoveService {
     private final MoveRepository moveRepository;
 
 
-//    public Long moveSave(MoveDto moveDto) {
-//
-//        Optional<MoveDto> optionalMoveDto
-//                = Optional.ofNullable(Optional.ofNullable(moveDto).orElseThrow(() -> new IllegalArgumentException("값이 없다")));
-//
-//        if (optionalMoveDto.isPresent()) {
-//
-//            MoveEntity moveEntity = MoveEntity.builder()
-//                    .moveWriter(moveDto.getName())
-//                    .moveType(moveDto.getMoveType())
-//                    .phone(moveDto.getPhone())
-//                    .firstAddress(moveDto.getFirstAddress())
-//                    .endAddress(moveDto.getEndAddress())
-//                    .build();
-//
-//            System.out.println(moveRepository.save(moveEntity).getId());
-//            return moveRepository.save(moveEntity).getId();
-//        }else {
-//            return 0L;
-//        }
-//
-//    }
     public MoveEntity moveSave(MoveDto moveDto) {
 
         Optional<MoveDto> optionalMoveDto
@@ -67,22 +45,4 @@ public class MoveService {
     }
 
 
-    public List<MoveDto> calendarListAll() {
-        List<MoveDto> calendarDtoList = new ArrayList<>();
-        List<MoveEntity> calendarEntityList = moveRepository.findAll();
-
-        for (MoveEntity calendarEntity : calendarEntityList){
-            MoveDto calendarDto = MoveDto.builder()
-                    .id(calendarEntity.getId())
-                    .moveWriter(calendarEntity.getMoveWriter())
-                    .phone(calendarEntity.getPhone())
-                    .firstAddress(calendarEntity.getFirstAddress())
-                    .endAddress(calendarEntity.getEndAddress())
-                    .moveType(calendarEntity.getMoveType())
-                    .build();
-            calendarDtoList.add(calendarDto);
-        }
-
-        return calendarDtoList;
-    }
 }

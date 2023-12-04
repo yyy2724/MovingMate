@@ -1,10 +1,7 @@
 package com.example.MovingMate.dto;
-
-
-import com.example.MovingMate.entity.calender.EventEntity;
 import lombok.*;
+import java.time.LocalDateTime;
 
-import javax.persistence.Column;
 
 @Builder
 @Getter
@@ -26,5 +23,8 @@ public class MoveDto {
     private String moveType;
 
     private String start;
+    private LocalDateTime createTime;
+
+    private LocalDateTime updateTime;
 
 }

@@ -1,4 +1,4 @@
-package com.example.MovingMate.Entity.order;
+package com.example.MovingMate.entity.order;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
