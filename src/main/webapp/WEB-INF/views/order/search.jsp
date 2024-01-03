@@ -14,7 +14,6 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/resources/css/common/pay_modal.css">
     <title>주문내역</title>
 </head>
 
@@ -36,23 +35,13 @@
     </thead>
     <tbody>
     <tr>
-<%--        <input type="hidden" value="${moveEntity.}">--%>
+        <%--        <input type="hidden" value="${moveEntity.}">--%>
         <td id="id">${moveEntity.id}</td>
         <td id="moveWriter">${moveEntity.moveWriter}</td>
         <td id="phone">${moveEntity.phone}</td>
         <td id="firstAddress">${moveEntity.firstAddress}</td>
         <td id="endAddress">${moveEntity.endAddress}</td>
-        <td id="moveType">
-            <c:choose>
-                <c:when test="${moveEntity.moveType eq 'oneRoom'}">원룸이사</c:when>
-                <c:when test="${moveEntity.moveType eq 'home'}">가정이사</c:when>
-                <c:when test="${moveEntity.moveType eq 'brave'}">용달이사</c:when>
-                <c:when test="${moveEntity.moveType eq 'company'}">기업이사</c:when>
-                <c:otherwise>
-                    <p>이사종류: ${moveEntity.moveType}</p>
-                </c:otherwise>
-            </c:choose>
-        </td>
+        <td id="moveType"><c:choose><c:when test="${moveEntity.moveType eq 'oneRoom'}">원룸이사</c:when><c:when test="${moveEntity.moveType eq 'home'}">가정이사</c:when><c:when test="${moveEntity.moveType eq 'brave'}">용달이사</c:when><c:when test="${moveEntity.moveType eq 'company'}">기업이사</c:when><c:otherwise>${moveEntity.moveType}</c:otherwise></c:choose></td>
         <td id="moveDate">${formattedDate}</td>
         <td id="price">
             <c:choose>
@@ -62,6 +51,9 @@
 
                 <c:when test="${moveEntity.price eq 0}">
                     가격 책정 중
+                </c:when>
+                <c:when test="${moveEntity.price eq 1}">
+                    결제완료
                 </c:when>
                 <c:otherwise>
                     ${moveEntity.price} 원
@@ -91,7 +83,7 @@
             const moveWriter = document.querySelector('#moveWriter').textContent;
             const phone = document.querySelector('#phone').textContent;
             const firstAddress = document.querySelector('#firstAddress').textContent;
-            const moveType = document.querySelector('#moveType').textContent
+            const moveType = document.querySelector('#moveType').textContent;
 
             const price = parseInt(document.querySelector('#price').textContent);
 
@@ -112,7 +104,7 @@
                     console.log(rsp);
                     $('#price').value = 1;
                     alert("결제가 완료되었습니다.")
-                } else{
+                } else {
                     alert('결제실패 : ' + rsp.error_msg);
                 }
             })
