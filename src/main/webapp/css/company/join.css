@@ -1,0 +1,108 @@
+@import "/css/common/reset.css";
+
+html{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+/* 폼 전체 스타일 */
+#comJoin {
+    justify-content: center;
+    width: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #eaeaf0;
+    border-radius: 5px;
+    background-color: #eaeaf0;
+}
+
+
+/* 각 섹션 폼 */
+.form-group {
+    border: 5px solid white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+/* 입력 필드 스타일 */
+#comJoin input[type="text"],
+#comJoin input[type="password"],
+#comJoin input[type="date"],
+#comJoin .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+/* 버튼 스타일 */
+#comJoin button,
+#comJoin input[type="submit"],
+#comJoin input[type="button"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#comJoin button:hover,
+#comJoin input[type="submit"]:hover,
+#comJoin input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* 피드백 메시지 스타일 */
+#comJoin .feedback span {
+    display: none;
+    color: #d9534f;
+}
+
+#comJoin .feedback .member_ok {
+    color: #5bc0de;
+}
+
+.genderList{
+    margin: 10px 0;
+}
+
+
+.h11 {
+    padding-left: 570px;
+    width: 800px
+}
+
+#mail {
+    width: 610px !important;
+}
+#postcode {
+    width: 610px !important;
+}
+#certificationNumber {
+    width: 600px !important;
+}
+
+#emailCheck {
+    margin-left: 10px; /* 인증번호 받기 버튼과 이메일 입력란 사이의 간격을 조절합니다. */
+}
+#certificationBtn {
+    margin-left: 10px; /* 인증번호 받기 버튼과 이메일 입력란 사이의 간격을 조절합니다. */
+}
+#uphyeon {
+    margin-left: 10px; /* 인증번호 받기 버튼과 이메일 입력란 사이의 간격을 조절합니다. */
+}

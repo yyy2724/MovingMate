@@ -36,3 +36,7 @@ out/
 ### VS Code ###
 .vscode/
 build
+
+
+
+src/main/resources/application.yml

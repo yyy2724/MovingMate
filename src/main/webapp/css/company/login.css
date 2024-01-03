@@ -1,0 +1,40 @@
+#modal2 .loginForm {
+    /* 모달 스타일 */
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    text-align: center;
+}
+
+/* #modal2 아이디를 가진 모달 내의 인풋 필드 스타일 */
+#modal2 input[type="email"],
+#modal2 input[type="password"],
+#modal2 input[type="submit"] {
+    /* 필드 스타일 */
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* #modal2 아이디를 가진 모달 내의 로그인 버튼 스타일 */
+#modal2 input[type="submit"] {
+    /* 버튼 스타일 */
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#modal2 input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#modal2 span {
+    font-weight: bold;
+}

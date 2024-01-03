@@ -17,12 +17,13 @@
 <p>이사 주소: ${moveData.endAddress}</p>
 <c:choose>
     <c:when test="${moveData.moveType eq 'oneroom'}"><p>이사종류: 원룸이사</p></c:when>
-    <c:when test="${moveData.moveType eq 'oneroom'}"><p>이사종류: 가정이사</p></c:when>
+    <c:when test="${moveData.moveType eq 'home'}"><p>이사종류: 가정이사</p></c:when>
     <c:when test="${moveData.moveType eq 'brave'}"><p>이사종류: 용달이사</p></c:when>
     <c:when test="${moveData.moveType eq 'company'}"><p>이사종류: 기업이사</p></c:when>
     <c:otherwise>
         <p>이사종류: ${moveData.moveType}</p>
     </c:otherwise>
 </c:choose>
+<a href="${pageContext.request.contextPath}/index">메인페이지</a>
 </body>
 </html>

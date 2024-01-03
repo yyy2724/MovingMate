@@ -17,22 +17,42 @@ public class CompanyEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "company_id" )
     private Long id;
 
-    @Column(nullable = false,name = "company_id")
-    private String companyId;
-
-    @Column(nullable = false, name = "company_name")
+    //회사 관련
+    @Column(name = "company_name", nullable = true)
     private String companyName;
 
-    @Column(nullable = false, name = "company_phone")
-    private String companyPhone;
+    @Column(name = "company_email",nullable = false)
+    private String email;
 
-    @Column(nullable = false, name = "company_business_number")
-    private String companyBusinessNumber;
+    @Column(name = "company_phone",nullable = false)
+    private String phone;
 
+    @Column(name = "company_password",nullable = false)
     private String password;
 
+    @Column(name = "company_postcode",nullable = false)
+    private String postcode;
+
+    @Column(name = "member_address",nullable = false)
+    private String address;
+
+    @Column(name = "member_detailAddress",nullable = false)
+    private String detailAddress;
+
+    @Column(name = "member_extraAddress",nullable = false)
+    private String extraAddress;
+
+    // 사업자번호
+    @Column(name = "business_number", nullable = true)
+    private String businessNumber;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role")
     private Role role;
+
+
+
 }

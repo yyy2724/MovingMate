@@ -28,12 +28,13 @@
 
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                    headerToolbar: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
-                    },
                     initialDate: '2023-01-12',
+                    initialView: 'timeGridWeek',
+                    slotLabelFormat: {
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: false
+                    },
                     navLinks: true, // can click day/week names to navigate views
                     businessHours: true, // display business hours
                     editable: true,
@@ -43,7 +44,8 @@
 
                     dateClick: function (info) {
                         if (confirm("이 날짜로 하시겠습니까?")) {
-
+                            var startDate = info.date;
+                            startDate.setHours(startDate.getHours() + 9);
 
                             var eventData = {
                                 id: id,
@@ -52,7 +54,7 @@
                                 firstAddress: moveFirst,
                                 endAddress: moveEnd,
                                 moveType: moveType,
-                                start: info.date
+                                start: startDate
                                 // 이벤트에 대한 다양한 정보 추가 가능
                             };
                             console.log(eventData)

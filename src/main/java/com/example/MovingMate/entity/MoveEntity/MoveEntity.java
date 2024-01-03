@@ -38,4 +38,9 @@ public class MoveEntity extends BaseEntity {
     private String start;   // 캘린더에서 선택한 날짜
 
 
+
+    @Column(nullable = true)
+    private int price = 0;   // 업체에서 제시한 금액
+
+
 }

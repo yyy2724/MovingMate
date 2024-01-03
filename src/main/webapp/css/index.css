@@ -80,3 +80,20 @@
 
 
 
+
+
+/*모달창*/
+ .modal {
+     padding: 20px; /* 내부 여백 */
+     background-color: #f7f7f7; /* 배경색 지정 */
+     border-radius: 5px; /* 모서리 둥글게 */
+ }
+
+/* 닫기 버튼 스타일링 */
+.close {
+    display: block; /* 블록 요소로 표시 */
+    margin-top: 10px; /* 상단 여백 */
+    color: #333; /* 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+

@@ -1,8 +1,13 @@
+@import "/css/common/reset.css";
 html {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding-top: 100px ;
+
+
+    overflow: hidden;
 }
 body {
     font-family: 'Noto Sans KR', sans-serif;
@@ -14,6 +19,7 @@ body {
     align-items: center;
     max-width: 600px;
     width: 100%;
+
 }
 .form-container {
     text-align: center;
@@ -37,4 +43,15 @@ p {
     border-radius: 3px;
     background-color: #f9f9f9;
     width: 100%;
+}
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
