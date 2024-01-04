@@ -46,7 +46,7 @@
 
         function openModal(id,moveWriter, phone, firstAddress, endAddress, moveType, start){
             document.getElementById('id').value = id;
-            document.getElementById('moveWriter').value = id;
+            document.getElementById('moveWriter').value = moveWriter;
             document.getElementById('phone').value = phone;
             document.getElementById('firstAddress').value = firstAddress;
             document.getElementById('endAddress').value = endAddress;

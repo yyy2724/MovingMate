@@ -20,6 +20,8 @@ configurations {
 repositories {
 	mavenCentral()
 	maven { url 'https://jitpack.io' }
+	maven { url 'https://repo.spring.io/milestone' }
+
 }
 
 dependencies {
@@ -65,13 +67,15 @@ dependencies {
 
 
 	// spring security
-	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.security:spring-security-taglibs:5.1.5.RELEASE'
 
 
 	// 결제 API 관련
 	implementation 'com.github.iamport:iamport-rest-client-java:0.1.6'
+
+
 
 }
 

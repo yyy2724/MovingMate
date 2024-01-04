@@ -42,6 +42,7 @@ public class MoveController {
     public String moveSave(@ModelAttribute MoveDto moveDto, Model model) {
         System.out.println(moveDto.getId() + "이게뭐고");
 
+        System.out.printf(moveDto.getMoveWriter());
         MoveEntity moveEntity = moveService.moveSave(moveDto);
 
 

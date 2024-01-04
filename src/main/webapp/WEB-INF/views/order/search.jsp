@@ -41,8 +41,12 @@
         <td id="phone">${moveEntity.phone}</td>
         <td id="firstAddress">${moveEntity.firstAddress}</td>
         <td id="endAddress">${moveEntity.endAddress}</td>
-        <td id="moveType"><c:choose><c:when test="${moveEntity.moveType eq 'oneRoom'}">원룸이사</c:when><c:when test="${moveEntity.moveType eq 'home'}">가정이사</c:when><c:when test="${moveEntity.moveType eq 'brave'}">용달이사</c:when><c:when test="${moveEntity.moveType eq 'company'}">기업이사</c:when><c:otherwise>${moveEntity.moveType}</c:otherwise></c:choose></td>
-        <td id="moveDate">${formattedDate}</td>
+        <td id="moveType"><c:choose><c:when test="${moveEntity.moveType eq 'oneRoom'}">원룸이사</c:when><c:when
+                test="${moveEntity.moveType eq 'home'}">가정이사</c:when><c:when
+                test="${moveEntity.moveType eq 'brave'}">용달이사</c:when><c:when
+                test="${moveEntity.moveType eq 'company'}">기업이사</c:when><c:otherwise>${moveEntity.moveType}</c:otherwise></c:choose></td>
+        <td id="start">${formattedDate}</td>
+        <input id="start1" type="hidden" value="${moveEntity.start}">
         <td id="price">
             <c:choose>
                 <c:when test="${moveEntity.price eq 0 && sessionScope['SPRING_SECURITY_CONTEXT'].authentication.principal.companyEntity.role eq 'COMPANY'}">
@@ -80,12 +84,14 @@
     <script>
         function KGpay() {
             const self = this;
-            const moveWriter = document.querySelector('#moveWriter').textContent;
+            const id = document.querySelector('#id').textContent;
             const phone = document.querySelector('#phone').textContent;
             const firstAddress = document.querySelector('#firstAddress').textContent;
+            const endAddress = document.querySelector('#endAddress').textContent;
+            const start = document.querySelector('#start1').value;
+            const moveWriter = document.querySelector('#moveWriter').textContent;
             const moveType = document.querySelector('#moveType').textContent;
-
-            const price = parseInt(document.querySelector('#price').textContent);
+            let price = parseInt(document.querySelector('#price').textContent);
 
             IMP.init("imp78035400");
             IMP.request_pay({
@@ -102,7 +108,35 @@
                 // 결제 후 호출되는 callback 함수
                 if (rsp.success) {
                     console.log(rsp);
-                    $('#price').value = 1;
+                    price = 1;
+                    const param = {
+                        id: id,
+                        phone: phone,
+                        firstAddress: firstAddress,
+                        endAddress: endAddress,
+                        moveWriter: moveWriter,
+                        moveType: moveType,
+                        start: start,
+                        price: price
+                    }
+                    const url = "/api/pay";
+                    fetch(url, { // 결제 후 상태 업데이트 하는 ajax
+                        method: 'POST',
+                        body: JSON.stringify(param),
+                        headers: {
+                            "content-Type": "application/json",
+                        },
+                    })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            console.log("결제상태 업데이트");
+                            console.log(data);
+                            location.reload();
+                        }).catch((error) => {
+                        alert("결제 업데이트 실패! 결제는 확인 되었습니다.");
+                    });
+
+
                     alert("결제가 완료되었습니다.")
                 } else {
                     alert('결제실패 : ' + rsp.error_msg);

@@ -108,6 +108,27 @@ public class MoveService {
     }
 
 
+    public int payUpdate(MoveDto moveDto) {
+        MoveEntity moveEntity = moveRepository.findById(moveDto.getId()).orElseThrow(()->{
+            throw new IllegalArgumentException("존재하지 않음");
+        });
+
+        MoveEntity moveEntity1 = moveEntity.builder()
+                .id(moveDto.getId())
+                .moveWriter(moveDto.getMoveWriter())
+                .phone(moveDto.getPhone())
+                .firstAddress(moveDto.getFirstAddress())
+                .endAddress(moveDto.getEndAddress())
+                .moveType(moveDto.getMoveType())
+                .start(moveDto.getStart())
+                .price(moveDto.getPrice())
+                .build();
+
+        Long id = moveRepository.save(moveEntity1).getId();
+        moveRepository.findById(id).orElseThrow();
+
+        return 1;
+    }
 }
 
 
