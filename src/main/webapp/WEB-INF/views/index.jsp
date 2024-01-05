@@ -1,47 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
-<!-- 모달 관련 라이브러리 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>main</title>
-    <link rel="stylesheet" href="/css/common/header.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/company/login.css">
-    <script src="/js/index.js" defer></script>
-    <script src="/js/index/moveSave.js" defer></script>
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-
-</head>
-<body>
-<div id="header" class="header">
-    <div class="nav">
-        <div class="top-nav">
-            <a href="/index">무빙메이트</a>
-        </div>
-
-        <ul>
-            <li><a href="#">이사</a></li>
-            <li><a href="#">이사비교견적</a></li>
-            <li><a href="#">청소</a></li>
-            <li><a href="#">혜택</a></li>
-            <li><a href="#">건물관리</a></li>
-            <li><a href="#">커뮤니티</a></li>
-            <li><a href="#">영구이사</a></li>
-            <li><a href="#">고객만족센터</a></li>
-            <li><a href="#"><img src="${pageContext.request.contextPath}/images/index/menu.JPG" alt="메뉴바" class="menu"
-                                 style="width: 50px; height: 50px;"></a></li>
-        </ul>
-    </div>
-</div>
-
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <script defer>
     function openModal() {
         $.ajax({
@@ -72,6 +32,37 @@
     });
 
 </script>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <link rel="stylesheet" href="/css/common/header.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/company/login.css">
+
+</head>
+<body>
+<div id="header" class="header">
+    <div class="nav">
+        <div class="top-nav">
+            <a href="/index">무빙메이트</a>
+        </div>
+
+        <ul>
+            <li><a href="#">이사</a></li>
+            <li><a href="#">이사비교견적</a></li>
+            <li><a href="#">청소</a></li>
+            <li><a href="#">혜택</a></li>
+            <li><a href="#">건물관리</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">영구이사</a></li>
+            <li><a href="#">고객만족센터</a></li>
+            <li><a href="#"><img src="${pageContext.request.contextPath}/images/index/menu.JPG" alt="메뉴바" class="menu"
+                                 style="width: 50px; height: 50px;"></a></li>
+        </ul>
+    </div>
+</div>
 
 <div class="container">
     <div class="sections-con">
@@ -117,17 +108,29 @@
         </div>
     </div>
 </div>
-<form action="/move/save" method="post">
-    <input type="radio" name="moveType" id="oneroom" value="oneRoom">원룸이사
-    <input type="radio" name="moveType" id="home" value="home">가정이사
-    <input type="radio" name="moveType" id="brave" value="brave">용달이사
-    <input type="radio" name="moveType" id="company" value="company">기업이사
-    이름 : <input type="text" name="moveWriter" id="moveWriter">
-    연락처 : <input type="text" name="phone" oninput="oninputPhone(this)" maxlength="14">
-    출발지 : <input type="text" name="firstAddress" id="firstAddress" onclick="firstAddressList()">
-    도착지 : <input type="text" name="endAddress" id="endAddress" onclick="endAddressList()">
-    <input type="submit" value="이사상담받기">
-</form>
+<div class="move-form-container">
+    <form action="/move/save" method="post" class="move-form">
+        <div class="isa">
+            <input type="radio" name="moveType" id="oneroom" value="oneRoom">
+            <label for="oneroom">원룸이사</label>
+            <input type="radio" name="moveType" id="home" value="home">
+            <label for="home">가정이사</label>
+            <input type="radio" name="moveType" id="brave" value="brave">
+            <label for="brave">용달이사</label>
+            <input type="radio" name="moveType" id="company" value="company">
+            <label for="company">기업이사</label><br>
+        </div>
+
+        <input type="text" name="moveWriter" id="moveWriter" class="move-input" placeholder="이름"><br>
+        <input type="text" name="phone" id="phone" oninput="oninputPhone(this)" maxlength="14" class="move-input"
+               placeholder="전화번호"><br>
+        <input type="text" name="firstAddress" id="firstAddress" onclick="firstAddressList()" class="move-input"
+               placeholder="출발지"><br>
+        <input type="text" name="endAddress" id="endAddress" onclick="endAddressList()" class="move-input"
+               placeholder="도착지"><br>
+        <input type="submit" value="견적접수" class="submit-btn">
+    </form>
+</div>
 
 
 <%-- 주문 신청 내역 모달창--%>
@@ -163,15 +166,27 @@
 
 <sec:authorize access="!isAuthenticated()">
     <a href="#modal2" rel="modal:open" class="modal2">관리자 로그인</a>
+    <a href="#modal1" rel="modal:open" class="myOrder">내 주문내역</a>
 </sec:authorize>
 
 <sec:authorize access="isAuthenticated()">
-    <a href="/company/logout">로그아웃</a>
-    <a href="/move/movingList">서비스 신청 목록</a>
+    <a href="/company/logout" class="logout">로그아웃</a>
+    <a href="/move/movingList" class="serviceList">서비스 신청 목록</a>
 </sec:authorize>
-<a href="#modal1" rel="modal:open">내 주문내역</a>
-<a href="/company/join">회사 회원가입</a>
+
+<a href="/company/join" class="join">회사 회원가입</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
+<script src="/js/index.js" defer></script>
+<script src="/js/index/moveSave.js" defer></script>
+<!-- 모달 관련 라이브러리 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" defer></script>
 
 
+<div class="footer" id="footer">
+
+</div>
 </body>
 </html>
