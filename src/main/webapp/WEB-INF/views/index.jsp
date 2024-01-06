@@ -40,7 +40,6 @@
     <link rel="stylesheet" href="/css/common/header.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/company/login.css">
-
 </head>
 <body>
 <div id="header" class="header">

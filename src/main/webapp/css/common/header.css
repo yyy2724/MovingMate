@@ -1,7 +1,12 @@
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
     background-color: white; /* 배경색 */
     color: dimgray; /* 글자색 */
     padding: 10px; /* 내부 여백 */
+    z-index: 1000;
 }
 
 /*.top-nav{*/
@@ -17,7 +22,9 @@
 }
 
 .nav{
+    display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 .nav ul li{

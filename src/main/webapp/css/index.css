@@ -109,12 +109,11 @@
 
 
 .move-form-container{
-    position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 
-    margin-right: 150px;
-    margin-bottom: 50px;
+    /*margin-right: 150px;*/
+    /*margin-bottom: 50px;*/
 }
 
 /* 폼 요소 스타일 */
@@ -125,9 +124,9 @@
     text-align: left;
     border: gray 5px solid;
 
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    top: 50px;
+    right: -50px;
 }
 
 .move-input {
@@ -156,22 +155,30 @@ input[type="radio"],
 input[type="checkbox"] {
     /* 원하는 스타일링 추가 */
 }
+
+.form-con{
+    width: 68%; /* 필요에 따라 조정하세요 */
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    border: gray 5px solid;
+}
 .isa{
     padding-bottom: 10px;
 }
 
+.opt{
+    width: 28%; /* 필요에 따라 조정하세요 */
+    display: flex;
+    flex-direction: column; /* 버튼을 수직으로 쌓습니다 */
+    align-items: flex-start; /* 아이템을 시작 부분(왼쪽)에 정렬합니다 */
+}
 
 
 a.modal2, a.myOrder, a.logout, a.serviceList, a.join {
-    display: inline-block;
-    margin: 5px 10px;
-    padding: 8px 12px;
-    text-decoration: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f0f0f0;
-    color: #333;
-    transition: all 0.3s ease;
+    margin: 5px 0; /* 수직 여백 조정 */
+    width: 100%; /* 전체 너비 차지 */
+    text-align: center; /* 텍스트 가운데 정렬 */
 }
 
 a:hover {
