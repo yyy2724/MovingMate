@@ -11,7 +11,7 @@
 /* #modal2 아이디를 가진 모달 내의 인풋 필드 스타일 */
 #modal2 input[type="email"],
 #modal2 input[type="password"],
-#modal2 input[type="submit"] {
+#modal2 input[type="submit"]{
     /* 필드 스타일 */
     margin: 10px 0;
     padding: 10px;
