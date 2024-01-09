@@ -17,9 +17,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springdb
-    username: root
-    password: 1234
+    url: jdbc:mysql://movingmatedb.c49rsi7kx9yq.ap-northeast-2.rds.amazonaws.com:3306/movingmateDB
+    username: admin
+    password: 0409qwe!
 #    password: '00000000'
 
   mvc:
