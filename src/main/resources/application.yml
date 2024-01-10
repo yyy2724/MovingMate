@@ -1,5 +1,6 @@
 server:
   port: 8090
+  address: 172.31.37.150
 spring:
   mail:
     host: smtp.gmail.com
