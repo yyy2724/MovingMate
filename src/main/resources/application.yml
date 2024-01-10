@@ -1,6 +1,5 @@
 server:
   port: 8090
-  address: 172.31.37.150
 spring:
   mail:
     host: smtp.gmail.com
@@ -18,7 +17,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://movingmatedb.c49rsi7kx9yq.ap-northeast-2.rds.amazonaws.com:3306/movingmateDB
+    url: jdbc:mysql://movingmatedb.c49rsi7kx9yq.ap-northeast-2.rds.amazonaws.com:3306/movingmateDB?useSSL=false
     username: admin
     password: 0409qwe!
 #    password: '00000000'
