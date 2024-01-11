@@ -17,7 +17,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://movingmatedb.c49rsi7kx9yq.ap-northeast-2.rds.amazonaws.com:3306/movingmateDB?useSSL=false
+    url: jdbc:mysql://movingmatedb.c49rsi7kx9yq.ap-northeast-2.rds.amazonaws.com:3306/movingmateDB
     username: admin
     password: 0409qwe!
 #    password: '00000000'

@@ -40,6 +40,7 @@ public class MoveEntity extends BaseEntity {
 
 
     @Column(nullable = true)
+    @Builder.Default
     private int price = 0;   // 업체에서 제시한 금액
 
 
