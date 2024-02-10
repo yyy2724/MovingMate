@@ -66,50 +66,9 @@ rest ful 하게 하여 새로고침 없이 적용되도록 하였습니다. <br>
 * 헤더 바 등의 기본적인 프론트엔트를 꾸몄습니다. <br>
 
 #### 결제 진행
+![Uploading 결제진행.gif…]()<br>
+
 
 </details>
 
-<details>
-<summary>권한별 리스트</summary>
 
-### 권한에 따른 3개의 리스트
-![img_11.png](img_11.png)
-![img_12.png](img_12.png)
-회사계정, 직원계정, 프리랜서계정에 따라 각기 다른 list목록들입니다.
-
-#### JPA 쿼리
-![img_13.png](img_13.png)
-JPA를 이용하여 리스트병 paging, search 등의 쿼리기능을 구현하였습니다. 
-
-</details>
-
-<details>
-<summary>날씨 API</summary>
-
-### API를 이용하여 오늘 날씨 가져오기
-![img_14.png](img_14.png)
-날씨와 지도를 보여주는 페이지입니다.
-
-![img_15.png](img_15.png)
-![img_16.png](img_16.png)
-API에서 온도를 가져오는 코드입니다.
-
-![img_17.png](img_17.png)
-![img_18.png](img_18.png)
-온도를 DB에 저장하는 코드입니다.
-
-
-### 챗봇 시나리오
-![img_19.png](img_19.png)
-챗봇에 "서울 날씨"를 치면 나오는 정보입니다.
-![img_21.png](img_21.png)
-![img_22.png](img_22.png)
-정보(온도)를 나타나게 하는 코드입니다.
-
-
-
-
-![img_20.png](img_20.png)
-챗봇에 지도를 나타나게 하는 script 코드입니다.
-
-</details>
