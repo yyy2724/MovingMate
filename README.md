@@ -1,4 +1,4 @@
-![결제진행](https://github.com/yyy2724/MovingMate/assets/93104606/a91da205-bca8-404f-88cf-814a5f023ca6)# MovingMate
+# MovingMate
 
 # SpringBoot-Project-SoleManager
 스프링 부트 -> 이삿짐 센터 프로젝트
