@@ -17,5 +17,3 @@
 * 김양현 : 기업 회원가입 및 로그인, 캘린더, 주문, 가격 책정, 결제, Git Actions 를 통한 배포
 
 
-### 🛠️ 개발 환경
-<img width="846" alt="스크린샷 2023-10-30 오후 4 18 31" src="https://github.com/anna1843/TechForge/assets/133622218/1797ae7e-bdd1-4826-92fd-b91f76223c86">
