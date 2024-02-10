@@ -1,4 +1,4 @@
-# MovingMate
+![결제진행](https://github.com/yyy2724/MovingMate/assets/93104606/a91da205-bca8-404f-88cf-814a5f023ca6)# MovingMate
 
 # SpringBoot-Project-SoleManager
 스프링 부트 -> 이삿짐 센터 프로젝트
@@ -72,7 +72,8 @@ rest ful 하게 하여 새로고침 없이 적용되도록 하였습니다. <br>
 * 헤더 바 등의 기본적인 프론트엔트를 꾸몄습니다. <br>
 
 #### 결제 진행
-![Uploading 결제진행.gif…]()<br>
+![결제진행](https://github.com/yyy2724/MovingMate/assets/93104606/6e02bfdd-7688-4f5d-aff9-029fff9d7020)
+<br>
 
 
 </details>
